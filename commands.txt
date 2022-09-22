@@ -7,6 +7,12 @@ check minikube cluster status
 
 ------------------------------
 
+kubectl help
+=> kubectl --help
+
+kubectl help (for certain command ex: get)
+=> kubectl get --help
+
 get all nodes in k8 cluster
 => kubectl get node
 
@@ -30,4 +36,13 @@ delete configMap (by name)
 create deplyment into cluster
 => kubectl apply -f {deplyment-file}.yaml
 
+-----------------------------------
 
+get all components deployed on cluster
+=> kubectl get all
+
+listing different resource (by type)
+=> kubectl get pod | configmap | secret | ...
+
+get details about a specific component (running instance)
+=> kubectl describe {component instance}
