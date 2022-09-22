@@ -1,0 +1,10 @@
+
+start k8 cluster (minikube)
+=> minikube start --dirive docker
+
+check minikube cluster status
+=> minikube status
+
+get all nodes in k8 cluster
+=> kubectl get node
+
