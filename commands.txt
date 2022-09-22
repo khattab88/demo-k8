@@ -5,6 +5,29 @@ start k8 cluster (minikube)
 check minikube cluster status
 => minikube status
 
+------------------------------
+
 get all nodes in k8 cluster
 => kubectl get node
+
+get all pod in k8 cluster
+=> kubectl get pod
+
+------------------------------
+
+create configMap into cluster
+=> kubectl apply -f {config-file}.yaml
+
+delete configMap (by name)
+kubectl delete configmap {config-name}
+
+create secret into cluster
+=> kubectl apply -f {secret-file}.yaml
+
+delete configMap (by name)
+=> kubectl delete secret {secret-name}
+
+create deplyment into cluster
+=> kubectl apply -f {deplyment-file}.yaml
+
 

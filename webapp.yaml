@@ -26,7 +26,7 @@ spec:
             valueFrom: 
               configMapKeyRef: 
                 name: mongo-config
-                value: mongo-url
+                key: mongo-url
           - name: USER_NAME
             valueFrom:
               secretKeyRef:
