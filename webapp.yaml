@@ -46,9 +46,11 @@ kind: Service
 metadata:
   name: webapp-service
 spec:
+  type: NodePort #(Default value is ClusterIP (internal service) , otherwise use NodePort (external service))
   selector:
     app.kubernetes.io/name: webapp
   ports:
     - protocol: TCP
       port: 3000 # (arbitrary port of service OR same port as pod's container)
       targetPort: 3000
+      nodePort: 30100 #  (expose each node IP at static port, must be at range 3000 - 32767)
