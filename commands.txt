@@ -5,6 +5,12 @@ start k8 cluster (minikube)
 check minikube cluster status
 => minikube status
 
+get minikube IP address
+=> minikube ip
+
+get minikube service list
+=> minikube service list
+
 ------------------------------
 
 kubectl help
@@ -38,6 +44,9 @@ create deplyment into cluster
 
 -----------------------------------
 
+get IP address for node
+=> kubectl et node -o wide
+
 get all components deployed on cluster
 => kubectl get all
 
@@ -46,3 +55,7 @@ listing different resource (by type)
 
 get details about a specific component (running instance)
 => kubectl describe {component instance}
+
+view logs for a pod 
+=> kubectl logs {pod name} -f
+
