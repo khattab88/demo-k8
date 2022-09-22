@@ -21,6 +21,22 @@ spec:
           image: nanajanashia/k8s-demo-app:v1.0
           ports:
             - containerPort: 3000
+          env:
+          - name: DB_URL
+            valueFrom: 
+              configMapKeyRef: 
+                name: mongo-config
+                value: mongo-url
+          - name: USER_NAME
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: mongo-user
+          - name: USER_PWD
+            valueFrom:
+              secretKeyRef:
+                name: mongo-secret
+                key: mongo-password
 
 --- # yaml config seperator (1 yaml file can contain multiple yaml configurations)
 
