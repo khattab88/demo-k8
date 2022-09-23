@@ -1,6 +1,6 @@
 
 start k8 cluster (minikube)
-=> minikube start --dirive docker
+=> minikube start --dirver docker
 
 check minikube cluster status
 => minikube status
@@ -36,7 +36,7 @@ kubectl delete configmap {config-name}
 create secret into cluster
 => kubectl apply -f {secret-file}.yaml
 
-delete configMap (by name)
+delete secret (by name)
 => kubectl delete secret {secret-name}
 
 create deplyment into cluster
@@ -44,11 +44,11 @@ create deplyment into cluster
 
 -----------------------------------
 
-get IP address for node
-=> kubectl et node -o wide
-
 get all components deployed on cluster
 => kubectl get all
+
+get IP address for node
+=> kubectl get node -o wide
 
 listing different resource (by type)
 => kubectl get pod | configmap | secret | ...
